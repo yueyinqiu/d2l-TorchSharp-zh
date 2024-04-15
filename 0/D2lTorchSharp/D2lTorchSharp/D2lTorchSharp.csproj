@@ -10,7 +10,7 @@
 			<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		-->
 
-		<Version>0.0.2</Version>
+		<Version>0.0.3</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/d2l-TorchSharp-zh.git</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -20,5 +20,9 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>TorchSharp; d2l; DiveIntoDeepLearning; 动手学深度学习</PackageTags>
 	</PropertyGroup>
+	<ItemGroup>
+	  <PackageReference Include="CsvHelper" Version="31.0.3" />
+	  <PackageReference Include="TorchSharp-cpu" Version="0.102.3" />
+	</ItemGroup>
 
 </Project>
