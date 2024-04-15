@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2lTorchSharp", "D2lTorchSharp\D2lTorchSharp.csproj", "{D120779B-69A5-440B-B0AB-49B82E5224F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D2lTorchSharp", "D2lTorchSharp\D2lTorchSharp.csproj", "{D120779B-69A5-440B-B0AB-49B82E5224F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalTest", "LocalTest\LocalTest.csproj", "{6E3F748E-A845-49E1-BF64-58D73181B769}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D120779B-69A5-440B-B0AB-49B82E5224F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D120779B-69A5-440B-B0AB-49B82E5224F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D120779B-69A5-440B-B0AB-49B82E5224F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E3F748E-A845-49E1-BF64-58D73181B769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E3F748E-A845-49E1-BF64-58D73181B769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E3F748E-A845-49E1-BF64-58D73181B769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E3F748E-A845-49E1-BF64-58D73181B769}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
