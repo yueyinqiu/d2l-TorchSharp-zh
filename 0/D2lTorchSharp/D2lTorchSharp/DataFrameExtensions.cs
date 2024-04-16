@@ -2,7 +2,7 @@
 using Microsoft.Data.Analysis;
 using TorchSharp;
 
-namespace Yueyinqiu.Su.D2lTorchSharp.Extensions;
+namespace Yueyinqiu.Su.D2lTorchSharp;
 public static class DataFrameExtensions
 {
     public static torch.Tensor ToTorch(
