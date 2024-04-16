@@ -3,14 +3,14 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		
+
 		<AssemblyName>Yueyinqiu.Su.D2lTorchSharp</AssemblyName>
 		<RootNamespace>$(AssemblyName)</RootNamespace>
 		<!--
 			<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		-->
 
-		<Version>0.0.5</Version>
+		<Version>0.0.6</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/d2l-TorchSharp-zh.git</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -21,8 +21,10 @@
 		<PackageTags>TorchSharp; d2l; DiveIntoDeepLearning; 动手学深度学习</PackageTags>
 	</PropertyGroup>
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Data.Analysis" Version="0.21.1" />
-	  <PackageReference Include="TorchSharp-cpu" Version="0.102.3" />
+		<!--
+		<PackageReference Include="Microsoft.Data.Analysis" Version="0.21.1" />
+		-->
+		<PackageReference Include="TorchSharp-cpu" Version="0.102.3" />
 	</ItemGroup>
 
 </Project>

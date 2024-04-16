@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Analysis;
+﻿/*
+using Microsoft.Data.Analysis;
 using TorchSharp;
 
 namespace Yueyinqiu.Su.D2lTorchSharp.Extensions;
@@ -20,8 +21,7 @@ public static class DataFrameExtensions
             var result = torch.empty(
                 size: rowCount * columnCount,
                 dtype: dtype,
-                device: cpu,
-                requires_grad: false);
+                device: cpu);
 
             dtype = result.dtype;
             device = torch.InitializeDevice(device);
@@ -31,7 +31,7 @@ public static class DataFrameExtensions
             {
                 foreach (dynamic value in row)
                 {
-                    result[i] = torch.tensor(value, cpu);
+                    result[i] = torch.tensor(value, dtype, cpu);
                     i++;
                 }
             }
@@ -44,3 +44,4 @@ public static class DataFrameExtensions
         }
     }
 }
+*/
