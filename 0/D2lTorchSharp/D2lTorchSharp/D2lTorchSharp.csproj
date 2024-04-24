@@ -10,7 +10,7 @@
 			<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		-->
 
-		<Version>1.0.0-0.0.8</Version>
+		<Version>1.0.0-0.0.10</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/d2l-TorchSharp-zh.git</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -25,9 +25,9 @@
 		<PackageReference Include="Microsoft.Data.Analysis" Version="0.21.1" />
 		-->
 		<PackageReference Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.24208.1" />
-		<PackageReference Include="ScottPlot" Version="5.0.26" />
+		<PackageReference Include="ScottPlot" Version="5.0.27" />
 		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
-		<PackageReference Include="TorchSharp-cpu" Version="0.102.3" />
+		<PackageReference Include="TorchSharp-cpu" Version="0.102.4" />
 	</ItemGroup>
 
 </Project>
