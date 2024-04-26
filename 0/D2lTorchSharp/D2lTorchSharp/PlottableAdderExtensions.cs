@@ -1,17 +1,14 @@
 ﻿using ScottPlot;
+using ScottPlot.DataSources;
 using ScottPlot.Plottables;
-using TorchSharp;
+using System.Reactive.Joins;
 using static TorchSharp.torch;
 
 namespace Yueyinqiu.Su.D2lTorchSharp;
 
 public static class PlottableAdderExtensions
 {
-    public static Scatter ScatterLine(this PlottableAdder adder, 
-        Tensor? xs, Tensor ys,
-        string legend = "",
-        LinePattern pattern = LinePattern.Solid,
-        Color? color = null)
+    private static ScatterSourceDoubleArray GetScatterSource(Tensor? xs, Tensor ys)
     {
         if (ys.Dimensions is not 1)
             throw new ArgumentException(
@@ -33,11 +30,36 @@ public static class PlottableAdderExtensions
 
             var xArray = xs.data<double>().ToArray();
             var yArray = ys.data<double>().ToArray();
-            
-            var result = adder.ScatterLine(xArray, yArray, color);
-            result.LegendText = legend;
-            result.LinePattern = pattern;
-            return result;
+
+            return new ScatterSourceDoubleArray(xArray, yArray);
         }
+    }
+
+    public static Scatter ScatterPoints(this PlottableAdder adder,
+        Tensor? xs, Tensor ys,
+        string legend = "",
+        MarkerShape shape = MarkerShape.FilledCircle,
+        float size = 5,
+        Color? color = null)
+    {
+        var source = GetScatterSource(xs, ys);
+        var result = adder.ScatterPoints(source, color);
+        result.LegendText = legend;
+        result.MarkerSize = size;
+        result.MarkerShape = shape;
+        return result;
+    }
+
+    public static Scatter ScatterLine(this PlottableAdder adder,
+        Tensor? xs, Tensor ys,
+        string legend = "",
+        LinePattern pattern = LinePattern.Solid,
+        Color? color = null)
+    {
+        var source = GetScatterSource(xs, ys);
+        var result = adder.ScatterLine(source, color);
+        result.LegendText = legend;
+        result.LinePattern = pattern;
+        return result;
     }
 }
