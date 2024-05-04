@@ -10,7 +10,7 @@
 			<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		-->
 
-		<Version>1.0.0-0.0.15</Version>
+		<Version>1.0.0-0.0.17</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/d2l-TorchSharp-zh.git</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -31,6 +31,7 @@
 		<PackageReference Include="ScottPlot" Version="5.0.27" />
 		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
 		<PackageReference Include="TorchSharp-cpu" Version="0.102.4" />
+		<PackageReference Include="TorchVision" Version="0.102.4" />
 	</ItemGroup>
 
 </Project>
