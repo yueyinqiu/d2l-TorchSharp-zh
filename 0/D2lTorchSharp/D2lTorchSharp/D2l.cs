@@ -2,8 +2,4 @@
 
 public static partial class D2l
 {
-    public static void HelloWorld()
-    {
-        Console.WriteLine("Hello world!");
-    }
 }
