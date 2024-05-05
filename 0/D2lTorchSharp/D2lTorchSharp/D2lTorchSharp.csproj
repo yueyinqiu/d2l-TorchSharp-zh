@@ -10,7 +10,7 @@
 			<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		-->
 
-		<Version>1.0.0-0.0.17</Version>
+		<Version>1.0.0-0.0.20</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/d2l-TorchSharp-zh.git</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -62,4 +62,20 @@ public static class PlottableAdderExtensions
         result.LinePattern = pattern;
         return result;
     }
+
+    public static Heatmap Heatmap(this PlottableAdder adder, 
+        Tensor intensities)
+    {
+        if (intensities.shape.Length is not 2)
+            throw new ArgumentException(
+                $"{nameof(intensities)}.{nameof(intensities.shape)}.{nameof(intensities.shape.Length)} " +
+                $"should be equals to two.", nameof(intensities));
+
+        using (NewDisposeScope())
+        {
+            intensities = intensities.detach().cpu().@double();
+            var array = intensities.data<double>().ToNDArray();
+            return adder.Heatmap((double[,])array);
+        }
+    }
 }

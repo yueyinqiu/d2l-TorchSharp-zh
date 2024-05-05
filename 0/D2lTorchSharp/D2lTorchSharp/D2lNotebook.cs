@@ -1,5 +1,6 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.DotNet.Interactive.Formatting;
+﻿using Microsoft.DotNet.Interactive.Formatting;
+using ScottPlot;
+using SkiaSharp;
 
 namespace Yueyinqiu.Su.D2lTorchSharp;
 
@@ -14,7 +15,7 @@ partial class D2l
 
         public static void RegisterScottPlotFormatter(int width = 600, int height = 400)
         {
-            Formatter.Register<ScottPlot.Plot>(
+            Formatter.Register<Plot>(
                 (plot, writer) => writer.Write(plot.GetImageHtml(width, height)),
                 HtmlFormatter.MimeType);
         }
