@@ -10,7 +10,7 @@
 			<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		-->
 
-		<Version>1.0.0-0.0.25</Version>
+		<Version>1.0.0-0.0.26</Version>
 		<PackageId>$(AssemblyName)</PackageId>
 		<RepositoryUrl>https://github.com/yueyinqiu/d2l-TorchSharp-zh.git</RepositoryUrl>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -19,7 +19,9 @@
 		<Authors>yueyinqiu</Authors>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>TorchSharp; d2l; DiveIntoDeepLearning; 动手学深度学习</PackageTags>
-		
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
 		<NoWarn>1701;1702;IDE1006</NoWarn>
 	</PropertyGroup>
 
@@ -28,10 +30,10 @@
 		<PackageReference Include="Microsoft.Data.Analysis" Version="0.21.1" />
 		-->
 		<PackageReference Include="Microsoft.DotNet.Interactive" Version="1.0.0-beta.24208.1" />
-		<PackageReference Include="ScottPlot" Version="5.0.27" />
+		<PackageReference Include="ScottPlot" Version="5.0.35" />
 		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
-		<PackageReference Include="TorchSharp-cpu" Version="0.102.4" />
-		<PackageReference Include="TorchVision" Version="0.102.4" />
+		<PackageReference Include="TorchSharp-cpu" Version="0.102.5" />
+		<PackageReference Include="TorchVision" Version="0.102.5" />
 	</ItemGroup>
 
 </Project>
